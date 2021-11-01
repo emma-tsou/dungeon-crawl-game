@@ -3,6 +3,10 @@ int intro;
 int game;
 int pause;
 int gameover;
+PFont volcanicDungeon;
+//Game objects
+ArrayList<GameObject> myObjects;
+
 void setup() {
   size(800, 600, FX2D);
   
