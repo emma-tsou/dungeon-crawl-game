@@ -18,3 +18,18 @@ void show() {
   strokeWeight(2);
   circle(loc.x, loc.y, 40);
 }
+
+void act() {
+  super.act();
+  
+  if (w) vel.y = -speed;
+  if (a) vel.x = -speed;
+  if (s) vel.y = speed;
+  if (d) vel.x = speed;
+  
+  if (vel.mag() > 5) vel.setMag(speed); 
+  
+  if (!w && !s) vel.y = vel.y * 0.75;
+  if (!a && !d) vel.x = vel.x * 0.75;
+  
+}
