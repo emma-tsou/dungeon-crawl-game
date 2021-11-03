@@ -4,6 +4,8 @@ int game;
 int pause;
 int gameover;
 PFont volcanicDungeon;
+PImage map;
+color northRoom, eastRoom, southRoom, westRoom;
 //Game objects
 ArrayList<GameObject> myObjects;
 
