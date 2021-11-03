@@ -20,7 +20,7 @@ void setup() {
   //Load Fonts
  
   //Load GIFs
-  
+  AnimatedGIF introGIF;
 }
 
 void draw() {
