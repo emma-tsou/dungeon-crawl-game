@@ -34,5 +34,7 @@ void act() {
   
    //check exits
   //north
-  if (northRoom != #FFFFFF && loc.y == height*0.1 && loc.x >= width/2-50 && loc.x <= width)
+  if (northRoom != #FFFFFF && loc.y == height*0.1 && loc.x >= width/2-50 && loc.x <= width/2+50)
+  roomY = roomY - 1;
+loc = new PVector(width/2, height*0.9-10);
 }
