@@ -32,4 +32,7 @@ void act() {
   if (!w && !s) vel.y = vel.y * 0.75;
   if (!a && !d) vel.x = vel.x * 0.75;
   
+   //check exits
+  //north
+  if (northRoom != #FFFFFF && loc.y == height*0.1 && loc.x >= width/2-50 && loc.x <= width)
 }
