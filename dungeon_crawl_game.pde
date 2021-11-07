@@ -9,6 +9,11 @@ color northRoom, eastRoom, southRoom, westRoom;
 //Game objects
 ArrayList<GameObject> myObjects;
 
+//create objects
+myObjects = new ArrayList<GameObkect>(1000);
+myHero = new Hero();
+myObkects.add(myHero); 
+
 void setup() {
   size(800, 600, FX2D);
   
@@ -24,6 +29,12 @@ void setup() {
 }
 
 void draw() {
+   //create darkness
+  darkness = new ArrayList<DarknessCell>(1000);
+  float size = 100;
+  int x = 0; y = 0;
+  
+  
   //mode framework
   if (mode == INTRO) {
     intro();
