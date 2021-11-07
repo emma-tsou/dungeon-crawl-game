@@ -34,6 +34,14 @@ void draw() {
   float size = 100;
   int x = 0; y = 0;
   
+  while (y < height) {
+    darkness.add(new DarknessCell(x, y, size));
+    x += size;
+    if (x >= width) {
+      x = 0;
+      y += size;
+    }
+  }
   
   //mode framework
   if (mode == INTRO) {
