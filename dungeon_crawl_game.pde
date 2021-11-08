@@ -34,10 +34,10 @@ void draw() {
   float size = 100;
   int x = 0; y = 0;
   
-  while (y < height) {
+  while (y < map.height) {
     darkness.add(new DarknessCell(x, y, size));
     x += size;
-    if (x >= width) {
+    if (x >= map.width) {
       x = 0;
       y += size;
     }
