@@ -1,5 +1,6 @@
 class GameObject {
-  PVector loc;
+ int roomX, roomY;
+ PVector loc;
   PVector vel;
   int hp;
   
