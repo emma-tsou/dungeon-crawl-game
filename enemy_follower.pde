@@ -1,7 +1,7 @@
 class Follower extends Enemy {
   
-  Follower() {
-    
+  Follower(int x, int y) {
+     super(100, 50, x, y);
   }
    void show() {
     stroke(black);
@@ -16,7 +16,10 @@ class Follower extends Enemy {
   
   void act() {
     
+     super.act();
     
+    vel = new PVector(myHero.loc.x - loc.x, myHero.loc.y - loc.y); 
+    vel.SetMag(3);
     
   }
 }
