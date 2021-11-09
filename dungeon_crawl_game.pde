@@ -10,9 +10,9 @@ color northRoom, eastRoom, southRoom, westRoom;
 ArrayList<GameObject> myObjects;
 
 //create objects
-myObjects = new ArrayList<GameObkect>(1000);
+myObjects = new ArrayList<GameObject>(1000);
 myHero = new Hero();
-myObkects.add(myHero); 
+myObjects.add(myHero); 
 
 void setup() {
   size(800, 600, FX2D);
