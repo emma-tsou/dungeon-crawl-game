@@ -13,6 +13,9 @@ ArrayList<GameObject> myObjects;
 myObjects = new ArrayList<GameObject>(1000);
 myHero = new Hero();
 myObjects.add(myHero); 
+myObjects.add(new Enemy());
+myObjects.add(new Follower());
+
 
 void setup() {
   size(800, 600, FX2D);
