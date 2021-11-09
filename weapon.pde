@@ -12,7 +12,7 @@ class Weapon {
     
   }
   
-  Weapon(int thr, int ps) {
+  Weapon(int thr, int bs) {
     shotTimer = 0;
     threshold = thr;
     bulletSpeed = bs;
