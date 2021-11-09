@@ -40,3 +40,6 @@ void act() {
   roomY = roomY - 1;
 loc = new PVector(width/2, height*0.9-10);
 }
+
+myWeapon.update();
+if (space) myWeapon.shoot();
