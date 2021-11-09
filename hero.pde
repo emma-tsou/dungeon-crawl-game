@@ -1,7 +1,6 @@
 class Hero extends GameObject {
   
   float speed;
-  int roomX, roomY;
    Weapon myWeapon;
   
   Hero() {
