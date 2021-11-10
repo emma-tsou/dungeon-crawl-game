@@ -1,25 +1,30 @@
 int mode;
-int intro;
-int game;
-int pause;
-int gameover;
+final int INTRO = 1;
+final int GAME = 2;
+final int PAUSE = 3;
+final int GAMEOVER = 4;
+
 PFont volcanicDungeon;
 PImage map;
 color northRoom, eastRoom, southRoom, westRoom;
+Hero myHero;
+ArrayList <DarknessCell> darkness;
+
 //Game objects
 ArrayList<GameObject> myObjects;
-
-//create objects
-myObjects = new ArrayList<GameObject>(1000);
-myHero = new Hero();
-myObjects.add(myHero); 
-myObjects.add(new Follower(1, 2));
-myObjects.add(new Follower(2, 1));
-
 
 
 void setup() {
   size(800, 600, FX2D);
+  
+   //create objects
+
+  myObjects.add(myHero); 
+  myObjects.add(new Enemy());
+  myObjects.add(new Follower(1, 2));
+  myObjects.add(new Follower(2, 1));
+  myObjects = new ArrayList<GameObject>(1000);
+
   
   //Alignments
   textAlign(CENTER, CENTER);
@@ -58,6 +63,8 @@ void draw() {
     pause();
   } else if (mode == GAMEOVER) {
     gameOver();
+  } else {
+    println ("Mode error : " + mode);
   }
   
 }
