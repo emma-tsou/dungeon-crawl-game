@@ -6,6 +6,7 @@ class AnimatedGIF {
   int currentFrame;
   int i;
   float x, y, w, h;
+  int pics;
 
   //constructors
   AnimatedGIF(int nf, String pre, String post) {
