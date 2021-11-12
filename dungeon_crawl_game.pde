@@ -13,10 +13,14 @@ ArrayList <DarknessCell> darkness;
 //Game objects
 ArrayList<GameObject> myObjects;
 
+AnimatedGIF nightsky;
+
 
 void setup() {
   size(800, 600, FX2D);
   
+  nightsky = new AnimatedGIF (12, "frame_", "_delay-0.07s.png", 0, 0, 600, 800);
+
    //create objects
 
   myObjects.add(myHero); 
@@ -32,6 +36,7 @@ void setup() {
   imageMode(CENTER);
   
   //Load Fonts
+ volcanicDungeon = createFont("Volcanic Dungeon.ttf", 50);
  
   //Load GIFs
   AnimatedGIF introGIF;
