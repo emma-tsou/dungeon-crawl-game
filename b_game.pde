@@ -42,4 +42,18 @@ if (westRoom != #FFFFFF) {
   stroke(black);
   fill(brown);
   rect(width/2, height/2, width*0.8, height*0.8);
+  
+  int i = 0; 
+  while (i < myObjects.size()) {
+     GameObject obj = myObjects.get(i);
+     if (obj.roomX == myHero.roomX && obj.roomY == myHero.roomY) {
+        obj.show();
+        obj.act();
+        if (obj.hp <= 0) {
+            myObjects.remove(i);
+            i--;
+        }
+   }
+   i++;
+}
 }
