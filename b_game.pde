@@ -6,10 +6,9 @@ void game() {
 }
 
 void drawRoom() {
-  background(Lbrown);
 
   //draw corners
-  stroke(black);
+  stroke(3, 3, 3);
   strokeWeight(4);
   line(0, 0, width, height);
   line(width, 0, 0, height);
@@ -23,7 +22,7 @@ void drawRoom() {
   
   //2 - draw doors where there are exits
   noStroke();
-  fill(black);
+  fill(3, 3, 3);
   if (northRoom != #FFFFFF) {
     ellipse(width/2, height*0.1, 100, 100);
   }
@@ -39,8 +38,8 @@ if (westRoom != #FFFFFF) {
   
   //draw floor
   rectMode(CENTER);
-  stroke(black);
-  fill(brown);
+  stroke(3, 3, 3);
+  fill(72, 47, 47);
   rect(width/2, height/2, width*0.8, height*0.8);
   
   int i = 0; 
