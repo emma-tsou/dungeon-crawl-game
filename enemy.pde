@@ -16,11 +16,11 @@ class Enemy extends GameObject {
   }
 
   void show() {
-    stroke(black);
+    stroke(3, 3, 3);
     strokeWeight(2);
-    fill(green);
-    ellipse(loc.x, loc.y, 50);
-    fill(black);
+    fill(99, 234, 88);
+    ellipse(50, 50, 50, 50);
+    fill((3, 3, 3);
     textSize(20);
     text(hp, loc.x, loc.y);
   }
@@ -31,7 +31,7 @@ class Enemy extends GameObject {
     int i = 0;
     while (i < myObjects.size()) {
       GameObject obj = myObjects.get(i);
-      if (obj instanceof Bullet) {
+      if (obj instanceof Weapon) {
         float d = dist(obj.loc.x, obj.loc.y, loc.x, loc.y); 
         if (d <= size/2 + obj.size/2) {
           hp = hp - 1;
