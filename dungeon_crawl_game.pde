@@ -40,6 +40,28 @@ void setup() {
  
   //Load GIFs
   AnimatedGIF introGIF;
+  
+   //Initialize
+  mode = INTRO;
+  textAngle = 270;
+
+  //loading the enemies from the map
+  x = 0;
+  y = 0;
+  while (y < map.height) {
+ color roomColor = map.get(x,y);
+ if (roomColor == pink) {
+   myObjects.add(new Enemy(x,y));
+ }
+ if (roomColor == blue) {
+   myObjects.add(new Follower(x,y));
+ }
+    x++;
+    if (x == map.width) {
+      x = 0;
+      y++;
+    }
+  }
 }
 
 void draw() {
