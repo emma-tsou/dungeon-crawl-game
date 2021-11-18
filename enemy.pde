@@ -6,13 +6,13 @@ class Enemy extends GameObject {
     roomY = 1;
   }
 
-  Enemy(int _hp, int s, int x, int y) {
+  Enemy(int x, int y) {
     loc = new PVector(width/2, height/2);
     vel = new PVector(0, 0);
-    hp = _hp;
-    size = s;
-    roomX = x;
-    roomY = y;
+    hp = 100;
+    size = 50;
+    roomX = 1;
+    roomY = 1;
   }
 
   void show() {
