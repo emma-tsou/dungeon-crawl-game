@@ -42,4 +42,19 @@ loc = new PVector(width/2, height*0.9-10);
 
 myWeapon.update();
 if (space) myWeapon.shoot();
+
+//check for collisions
+int i = 0;
+while(i < myObjects.size()) {
+  GameObject myObj = myObjects.get(i);
+  if (myObj instanceof EnemyBullet) {
+    if (myObj.roomX == roomX && myObj.roomY == roomY) {
+      float d = dist(myObj.loc.x, myObj.loc.y, loc.x, loc.y);
+      if (d < myObj.size/2 + size/2) {
+        hp = hp - int(myObj.vel.mag());
+        myObj.hp = 0;
+      }
+    }
+  }
+  i++;
 }
