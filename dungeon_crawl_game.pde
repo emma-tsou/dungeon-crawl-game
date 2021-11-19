@@ -4,6 +4,19 @@ final int GAME = 2;
 final int PAUSE = 3;
 final int GAMEOVER = 4;
 
+//settings: enemies
+final int TURRET_HP = 50;
+final int TURRET_SIZE = 50;
+final int TURRET_THRESHOLD = 60;
+final int TURRET_BULLET_SPEED = 5; 
+
+final int SPAWNINGPOOL_HP = 50;
+final int SPAWNINGPOOL_SIZE = 100;
+final int SPAWNINGPOOL_THRESHOLD = 100;
+
+//settings: weapons
+
+
 PFont volcanicDungeon;
 PImage map;
 color northRoom, eastRoom, southRoom, westRoom;
@@ -43,7 +56,7 @@ void setup() {
   
    //Initialize
   mode = INTRO;
-  textAngle = 270;
+ 
 
   //loading the enemies from the map
   x = 0;
