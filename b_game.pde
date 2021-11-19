@@ -56,3 +56,17 @@ if (westRoom != #FFFFFF) {
    i++;
 }
 }
+
+void drawGameObject() {
+  
+}
+
+void drawLightLayer() {
+  
+}
+
+void drawMiniMap() {
+  
+}
+
+
