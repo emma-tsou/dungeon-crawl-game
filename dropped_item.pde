@@ -20,4 +20,8 @@ class DroppedItem extends GameObject {
     
   }
   
+   void act() {
+   
+ }
+  
 }
