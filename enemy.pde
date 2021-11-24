@@ -36,6 +36,10 @@ class Enemy extends GameObject {
         if (d <= size/2 + obj.size/2) {
           hp = hp - 1;
           obj.hp = 0;
+          if (hp <= 0) {
+            explode(size);
+            myObjects.add(new DroppedItem(loc.x, loc.y, roomX, roomY));
+            }
         }
       }
       i++;
