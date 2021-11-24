@@ -58,3 +58,6 @@ while(i < myObjects.size()) {
   }
   i++;
 }
+}
+
+}
