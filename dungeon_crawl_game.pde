@@ -13,6 +13,8 @@ final int TURRET_BULLET_SPEED = 5;
 final int SPAWNINGPOOL_HP = 50;
 final int SPAWNINGPOOL_SIZE = 100;
 final int SPAWNINGPOOL_THRESHOLD = 100;
+final int x = 0;
+final int y = 0;
 
 //settings: weapons
 
@@ -59,8 +61,6 @@ void setup() {
  
 
   //loading the enemies from the map
-  x = 0;
-  y = 0;
   while (y < map.height) {
  color roomColor = map.get(x,y);
  if (roomColor == pink) {
