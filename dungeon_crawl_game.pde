@@ -16,6 +16,19 @@ final int SPAWNINGPOOL_THRESHOLD = 100;
 final int x = 0;
 final int y = 0;
 
+//keyboard input
+boolean w, a, s, d, space;
+
+//color pallette
+color blue = #1EE7FB;
+color green = #C3F83C;
+color pink = #F1416B;
+color purple = #C981E6;
+color yellow = #FFF387;
+color Dgray = #1C0F00;
+color Dbrown = #6B4F00;
+color brown = #987G1D;
+
 //settings: weapons
 
 
@@ -59,24 +72,22 @@ void setup() {
    //Initialize
   mode = INTRO;
  
-
   //loading the enemies from the map
-  while (y < map.height) {
+x = 0;
+y = 0;
+while (y < map.height) {
  color roomColor = map.get(x,y);
- if (roomColor == pink) {
-   myObjects.add(new Enemy(x,y));
+ if (rooomColor == pink) {
+   myObjects.add(new Enemy(x, y)); 
  }
- if (roomColor == blue) {
-   myObjects.add(new Follower(x,y));
- }
-    x++;
-    if (x == map.width) {
-      x = 0;
-      y++;
-    }
+  x++;
+  if (x == map.width) {
+    x = 0;
+    y++;
   }
 }
 
+ 
 void draw() {
    //create darkness
   darkness = new ArrayList<DarknessCell>(1000);
