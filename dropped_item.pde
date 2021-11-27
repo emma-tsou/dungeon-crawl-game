@@ -17,7 +17,9 @@ class DroppedItem extends GameObject {
   
   void show() {
     stroke(black);
-    
+     strokeWeight(2);
+    fill(c);
+    circle(loc.x, loc.y, size); 
   }
   
    void act() {
