@@ -11,8 +11,8 @@ class Enemy extends GameObject {
     vel = new PVector(0, 0);
     hp = 100;
     size = 50;
-    roomX = 1;
-    roomY = 1;
+    roomX = x;
+    roomY = y;
   }
 
   void show() {
@@ -31,18 +31,15 @@ class Enemy extends GameObject {
     int i = 0;
     while (i < myObjects.size()) {
       GameObject obj = myObjects.get(i);
-      if (obj instanceof Weapon) {
-        float d = dist(obj.loc.x, obj.loc.y, loc.x, loc.y); 
-        if (d <= size/2 + obj.size/2) {
-          hp = hp - 1;
+      if (obj instanceof Bullet && isCollidingWith(obj)) {
+          hp = hp - int(obj.vel.mag());
           obj.hp = 0;
           if (hp <= 0) {
             explode(size);
             myObjects.add(new DroppedItem(loc.x, loc.y, roomX, roomY));
             }
-        }
       }
       i++;
     }
-  }
-}
+  } //end of act
+} //end of class
