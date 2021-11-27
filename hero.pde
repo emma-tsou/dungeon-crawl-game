@@ -47,17 +47,14 @@ if (space) myWeapon.shoot();
 int i = 0;
 while(i < myObjects.size()) {
   GameObject myObj = myObjects.get(i);
-  if (myObj instanceof EnemyBullet) {
-    if (myObj.roomX == roomX && myObj.roomY == roomY) {
-      float d = dist(myObj.loc.x, myObj.loc.y, loc.x, loc.y);
-      if (d < myObj.size/2 + size/2) {
+  if (myObj instanceof EnemyBullet) && isColliding(myObj) {
         hp = hp - int(myObj.vel.mag());
         myObj.hp = 0;
-      }
     }
-  }
+    if (myObj instanceof Enemy && isCollidingWith(myObj)) {
+}
   i++;
 }
-}
+} //end of act
 
-}
+} //end of class
