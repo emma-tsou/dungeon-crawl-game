@@ -66,7 +66,14 @@ void drawLightLayer() {
 }
 
 void drawMiniMap() {
-  
+   int size = 10;
+  for (int x = 0; x < map.width; x++) {
+    for (int y = 0; y < map.height; y++) {
+      fill(map.get(x, y), 100);
+      square(x*size+50, y*size+50, size);
+    }
+  }
+  fill(purple);
 }
 
 
