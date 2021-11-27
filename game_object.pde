@@ -1,13 +1,17 @@
 class GameObject {
- int roomX, roomY;
+
+color c;
+int roomX, roomY;
  PVector loc;
   PVector vel;
   int hp;
-  
+   int size;
+   
   GameObject() {
     loc = new PVector (width/2, height/2);
     vel = new PVector (0, 0);
     hp = 1;
+    c = purple;
   }
   
   void show() {
