@@ -52,6 +52,10 @@ while(i < myObjects.size()) {
         myObj.hp = 0;
     }
     if (myObj instanceof Enemy && isCollidingWith(myObj)) {
+     DroppedItemitem = (DroppedItem) myObj;
+        if (item.type == GUN) {
+          myWeapon = item.w;
+        }
 }
   i++;
 }
