@@ -27,7 +27,7 @@ color purple = #C981E6;
 color yellow = #FFF387;
 color Dgray = #1C0F00;
 color Dbrown = #6B4F00;
-color brown = #987G1D;
+//color brown = #987G1D;
 
 //settings: weapons
 
