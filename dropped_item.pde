@@ -5,7 +5,7 @@ class DroppedItem extends GameObject {
   
   DroppedItem(float x, float y, int rx, int ry) {
     type = GUN;
-    w = new ShotGun();
+    w = new AutoPistol();
     hp = 1;
     loc = new PVector(x, y);
     vel = new PVector(0, 0);
