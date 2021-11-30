@@ -3,6 +3,7 @@ class Follower extends Enemy {
   Follower(int x, int y) {
      super(100, 50, x, y);
   }
+  
    void show() {
     stroke(black);
     strokeWeight(2);
