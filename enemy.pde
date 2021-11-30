@@ -15,6 +15,15 @@ class Enemy extends GameObject {
     roomY = y;
   }
 
+ Enemy(int _hp, int s, int x, int y) {
+    loc = new PVector(width/2, height/2);
+    vel = new PVector(0, 0);
+    hp = _hp;
+    size = s;
+    roomX = x;
+    roomY = y;
+  }
+
   void show() {
     stroke(3, 3, 3);
     strokeWeight(2);
