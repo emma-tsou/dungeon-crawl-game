@@ -1,3 +1,7 @@
+final int AMMO = 0;
+final int HEALTH = 1;
+final int GUN = 2;
+
 int mode;
 final int INTRO = 1;
 final int GAME = 2;
@@ -28,6 +32,8 @@ color yellow = #FFF387;
 color Dgray = #1C0F00;
 color Dbrown = #6B4F00;
 //color brown = #987G1D;
+color black = #000000;
+
 
 //settings: weapons
 
@@ -50,18 +56,29 @@ void setup() {
   nightsky = new AnimatedGIF (12, "frame_", "_delay-0.07s.png", 0, 0, 600, 800);
 
    //create objects
-
+  myObjects = new ArrayList<GameObject>(1000);
   myObjects.add(myHero); 
   myObjects.add(new Enemy());
   myObjects.add(new Follower(1, 2));
   myObjects.add(new Follower(2, 1));
-  myObjects = new ArrayList<GameObject>(1000);
-
+ 
   
-  //Alignments
-  textAlign(CENTER, CENTER);
-  rectMode(CENTER);
-  imageMode(CENTER);
+  //create darkness
+  darkness = new ArrayList<DarknessCell>(1000);
+  float size = 50;
+  int x = 0; 
+  int y = 0;
+
+  while (y < map.height) {
+    darkness.add(new DarknessCell(x, y, size)); 
+    x += size;
+    if (x >= map.width) {
+      x = 0;
+      y += size;
+    }
+  }
+  
+
   
   //Load Fonts
  volcanicDungeon = createFont("Volcanic Dungeon.ttf", 50);
@@ -89,20 +106,7 @@ while (y < map.height) {
 
  
 void draw() {
-   //create darkness
-  darkness = new ArrayList<DarknessCell>(1000);
-  float size = 50;
-  int x = 0; 
-  int y = 0;
   
-  while (y < map.height) {
-    darkness.add(new DarknessCell(x, y, size));
-    x += size;
-    if (x >= map.width) {
-      x = 0;
-      y += size;
-    }
-  }
   
   //mode framework
   if (mode == INTRO) {
