@@ -8,7 +8,7 @@ class Hero extends GameObject {
     speed = 3;
     roomX = 1;
     roomY = 1;
-     myWeapon = new SniperRifle();
+     myWeapon = new AutoPistol();
   }
   
 }
